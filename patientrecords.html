@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>        
+    <title>The Virtual Clinic</title>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+            <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+            <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+            <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+
+    </head>
+
+    <body>
+       
+                <div class="pagination-centered text-center">
+                <h3>The Virtual Clinic</h3>
+                      <div>
+                          Name   <input id="namebox" type="text"></input> <br>
+                          Roll No <input id="rollbox" type="text"></input><br>
+                          Gender <input id="genbox" type="text"></input><br>
+                          Section <input id="secbox" type="text"></input><br>
+
+                          <br><br>
+
+                          <button id="insert">Insert</button>
+                          <button id="update">Update</button>
+                          <button id="select">Select</button>
+                          <button id="delete">Delete</button>
+
+                           
+                      </div>
+                      <a href="#signup1" class="text-center new-account">Create an account </a>
+              </div>
+              
+            </div>
+        </div>
+        
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+       apiKey: "AIzaSyAH9K4_L9EAKxqx0Mb-TvJUI4EUdCPRDqI",
+       authDomain: "qparkagent.firebaseapp.com",
+       databaseURL: "https://qparkagent.firebaseio.com",
+       projectId: "qparkagent",
+       storageBucket: "qparkagent.appspot.com",
+       messagingSenderId: "572164716597",
+       appId: "1:572164716597:web:b2a64d68ecfea1c291597c"
+                          };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="patients.js"></script>
+
+    </body>
+</html>
