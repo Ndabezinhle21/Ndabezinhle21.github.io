@@ -2,10 +2,12 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
 
-    document.getElementById("user_div").style.display = "block";
-    document.getElementById("login_div").style.display = "none";
+    // document.getElementById("user_div").style.display = "block";
+    // document.getElementById("login_div").style.display = "none";
+    // var user = firebase.auth().currentUser;
 
-    var user = firebase.auth().currentUser;
+     window.location = "index1.html";
+   
 
     if(user != null){
 
