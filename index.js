@@ -6,9 +6,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("login_div").style.display = "none";
     var user = firebase.auth().currentUser;
 
-    // window.location = "index1.html";
-   
-
     if(user != null){
 
       var email_id = user.email;
@@ -38,11 +35,13 @@ function login(){
     window.alert("Error : " + errorMessage +errorCode);
     // ...
   });
-
 }
 
 function logout(){
   firebase.auth().signOut();
   window.location = "index.html";
-  window.alert('Button Click works');
+ }
+
+function dashboard(){
+  window.open = "index1.html";
 }
