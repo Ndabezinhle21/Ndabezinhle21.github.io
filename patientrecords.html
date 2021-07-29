@@ -7,7 +7,7 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="patientRecords.css" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,36 +15,236 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
             <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
             <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-            <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+            <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+            <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+            <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+            <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+            <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+            <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+            <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+            <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+            <link rel="stylesheet" href="./recordsstyle.css">
 
 
     </head>
 
-    <body>
+    <body class="hold-transition sidebar-mini layout-fixed">
+
+      <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+          <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="Logo" height="60" width="60">
+        </div>
+      
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+          <!-- Left navbar links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+           
+          </ul>
+      
+          <!-- Right navbar links -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Navbar Search -->
+            <li class="nav-item">
+              <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                <i class="fas fa-search"></i>
+              </a>
+              <div class="navbar-search-block">
+                <form class="form-inline">
+                  <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                      <button class="btn btn-navbar" type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                      <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+      
+            <li class="nav-item">
+              <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                <i class="fas fa-th-large"></i>
+              </a>
+            </li>   
+          </ul>
+        </nav>
+        <!-- /.navbar -->
+      
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-light-primary elevation-4">
+          <!-- Brand Logo -->
+          <a href="index1.html" class="brand-link">
+            <img src="dist/img/AdminLTELogo.png" alt="VC Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">The Virtual Clinic</span>
+          </a>
+      
+              <!-- SidebarSearch Form -->
+            <div class="form-inline">
+              <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-sidebar">
+                    <i class="fas fa-search fa-fw"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item menu-open">
+                  <a href="#" class="nav-link active">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                      Doctors Portal
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="./index1.html" class="nav-link active">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Patients Records</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./index2.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Appointments</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./index3.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Video Consult</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+      
+                <li class="nav-header">Other</li>
+                       
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-search"></i>
+                    <p>
+                      Search
+                      <i class="fas fa-angle-left right"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="pages/search/simple.html" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Simple Search</p>
+                      </a>
+                    </li>
+                  
+                  </ul>
+                </li>
+               
+                <li class="nav-header">LABELS</li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-circle text-danger"></i>
+                    <p class="text">Important</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-circle text-warning"></i>
+                    <p>Warning</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-circle text-info"></i>
+                    <p>Informational</p>
+                  </a>
+                </li>
+      
+                <li class="nav-header">Session</li>
+                <li class="nav-item">
+                  <a  onclick="logout()" href="index.html" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>
+                      Log Out
+                      <span class="badge badge-info right">1</span>
+                    </p>
+                  </a>
+                </li>
+      
+              </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+          </div>
+          <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+          <header>
+         <h3>Add Patient</h3>
+       </header>
        
-                <div class="pagination-centered text-center">
-                <h3>The Virtual Clinic</h3>
-                      <div>
-                          Name   <input id="namebox" type="text"></input> <br>
-                          Roll No <input id="rollbox" type="text"></input><br>
-                          Gender <input id="genbox" type="text"></input><br>
-                          Section <input id="secbox" type="text"></input><br>
+                <div class="content-wrapper">
+                                    <div>
+                          Name   <input class="form-control-plaintext"  id="namebox" type="text"></input> <br>
+                          Age <input class="form-control-plaintext"  id="agebox" type="number"></input><br>
+                          Gender <input class="form-control-plaintext" id="genderbox" type="text"></input><br>
+                          Blood Group <input class="form-control-plaintext"  id="bloodgroupbox" type="text"></input><br>
+                          Contact Number <input class="form-control-plaintext" id="numberbox" type="tel"></input><br>
+                          Address <input class="form-control-plaintext" id="addressbox" type="text"></input><br>
+                          Email <input class="form-control-plaintext" id="emailbox" type="email"></input><br>
+                          Password <input class="form-control-plaintext" id="passwordbox" type="password"></input><br>
+
 
                           <br><br>
 
-                          <button id="insert">Insert</button>
-                          <button id="update">Update</button>
-                          <button id="select">Select</button>
-                          <button id="delete">Delete</button>
+                          <button class="btn btn-add" id="insert">Insert</button>
+                          <button class="btn btn-add" id="update">Update</button>
+                          <button class="btn btn-add" id="select">Select</button>
+                          <button  class="btn btn-add"id="delete">Delete</button>
 
                            
                       </div>
-                      <a href="#signup1" class="text-center new-account">Create an account </a>
+         
               </div>
               
             </div>
         </div>
-        
+        <footer class="main-footer">
+          <strong>Copyright &copy; 2014-2021 <a href="https://thevirtualclinic.co.zw">The Virtual Clinic</a>.</strong>
+          All rights reserved.
+          <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.1.0
+          </div>
+        </footer>
+      
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+          <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+      </div>
 
 
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
@@ -63,5 +263,34 @@
   </script>
   <script src="patients.js"></script>
 
+  <script src="./script.js"></script>
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="plugins/sparklines/sparkline.js"></script>
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
+
+<script src="dist/js/pages/dashboard.js"></script>
+
+
+
+<script src="index.js"></script>
+
     </body>
-</html>
+</html> -->
+

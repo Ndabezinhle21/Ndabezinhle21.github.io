@@ -67,6 +67,13 @@ header h3 {
 .btn-edit {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+
+
+}
+
+.btn-view {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .btn-edit:hover {
@@ -89,8 +96,8 @@ header h3 {
 }
 
 .btn-add {
-  width: 6rem;
-  height: 2rem;
+  width: 10rem;
+  height: 5rem;
   background: var(--primary-color);
   border: none;
   color: #fff;
