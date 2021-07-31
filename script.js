@@ -7,6 +7,11 @@ const addModalForm = document.querySelector('.add-modal .form');
 const editModal = document.querySelector('.edit-modal');
 const editModalForm = document.querySelector('.edit-modal .form');
 
+//modal view
+const viewModal = document.querySelector('.view-modal');
+const viewModalForm = document.querySelector('.view-modal .form');
+
+
 const btnAdd = document.querySelector('.btn-add');
 
 const tableUsers = document.querySelector('.table-users');
@@ -22,13 +27,26 @@ const renderUser = doc => {
       <td>${doc.data().phone}</td>
       <td>${doc.data().email}</td>
       <td>
-        <button class="btn btn-edit">View</button>
+        <button class="btn btn-view">View</button>
         <button class="btn btn-edit">Edit</button>
         <button class="btn btn-delete">Delete</button>
       </td>
     </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
+
+  // Click view user
+  const btnView = document.querySelector(`[data-id='${doc.id}'] .btn-view`);
+  btnView.addEventListener('click', () => {
+    editModal.classList.add('modal-show');
+
+    id = doc.id;
+    editModal.firstName.value = doc.data().firstName;
+    editModal.lastName.value = doc.data().lastName;
+    editModal.phone.value = doc.data().phone;
+    editModal.email.value = doc.data().email;
+
+  });
 
   // Click edit user
   const btnEdit = document.querySelector(`[data-id='${doc.id}'] .btn-edit`);

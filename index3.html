@@ -131,7 +131,7 @@
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Video Consult</p>
+                  <p>Add Patient</p>
                 </a>
               </li>
             </ul>
@@ -197,15 +197,103 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-   
-    <header>
-      <h3>Consult</h3>
-      </header>
-      <p>
+ 
+        <header>
+       <h3>Add Patient</h3>
+     </header>
+     <p></p>
+     <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-people-arrows"></i></span>
 
-    <!-- Main content -->
-    <div class="content">
+              <div class="info-box-content">
+                <span class="info-box-text">Add</span>
+                <span class="info-box-number">
+                  
+                  <small></small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar-check"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Update</span>
+                <span class="info-box-number"></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-person-booth"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Select</span>
+                <span class="info-box-number"></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-remove"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Delete</span>
+                <span class="info-box-number"></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+     <p>
      
+              <div class="content-wrapper">
+                                  <div>
+                        Name   <input class="form-control-plaintext"  id="namebox" type="text"></input> <br>
+                        Age <input class="form-control-plaintext"  id="agebox" type="number"></input><br>
+                        Gender <input class="form-control-plaintext" id="genderbox" type="text"></input><br>
+                        Blood Group <input class="form-control-plaintext"  id="bloodgroupbox" type="text"></input><br>
+                        Contact Number <input class="form-control-plaintext" id="numberbox" type="tel"></input><br>
+                        Address <input class="form-control-plaintext" id="addressbox" type="text"></input><br>
+                        Email <input class="form-control-plaintext" id="emailbox" type="email"></input><br>
+                        Password <input class="form-control-plaintext" id="passwordbox" type="password"></input><br>
+
+
+                        <br><br>
+
+                        <button class="btn btn-add" id="insert">Insert</button>
+                        <button class="btn btn-add" id="update">Update</button>
+                        <button class="btn btn-add" id="select">Select</button>
+                        <button  class="btn btn-add"id="delete">Delete</button>
+
+                         
+                    </div>
+       
+            </div>
+            
+          </div>
+      </div>
     </div>
     <!-- /.content -->
   </div>

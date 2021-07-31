@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Virtual Clinic | Portal</title>
+  <title>DigiCare - Virtual Clinic | Portal</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -120,7 +120,7 @@
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Video Consult</p>
+                  <p>Add Patient</p>
                 </a>
               </li>
             </ul>
@@ -272,9 +272,9 @@
           <th>Action</th>
         </tr>
       </table>
-      <a href="records.html">
+      
         <button class="btn btn-add">Add</button>
-    </a>
+   
 
     <a href="index.html">
       <button class="btn btn-add" onclick="logout()">Sign Out</button>
@@ -283,8 +283,9 @@
     <!-- Add Modal -->
     <div class="add-modal modal-wrapper">
       <div class="modal-dialog">
-        <div class="modal-header"><h3>Add New User</h3></div>
-        <div class="modal-body">
+ 
+        <div class="modal-content">
+          <div class="modal-header"><h3>Add New User</h3></div>
           <form class="form" autocomplete="off">
             <input type="text" name="firstName" placeholder="First Name">
             <input type="text" name="lastName" placeholder="Last Name">
@@ -296,22 +297,41 @@
       </div>
     </div>
 
-    <!-- Edit Modal -->
-    <div class="edit-modal modal-wrapper">
-      <div class="modal-dialog">
-        <div class="modal-header"><h3>Edit User</h3></div>
-        <div class="modal-body">
+    <!-- View Modal -->
+    <div class="view-modal modal-wrapper"role="dialog">
+      <div class="modal-dialog modal-l">     
+        <div class="modal-content">
+          <div class="modal-header"><h3>View Patient Details</h3></div>
           <form class="form" autocomplete="off">
             <input type="text" name="firstName" placeholder="First Name">
             <input type="text" name="lastName" placeholder="Last Name">
             <input type="number" name="phone" placeholder="Phone">
             <input type="email" name="email" placeholder="Email">
-            <button class="btn btn-modal">Submit</button>
+            <button>Back</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+
+    <!-- Edit Modal -->
+    <div class="edit-modal modal-wrapper"role="dialog">
+      <div class="modal-dialog modal-l">     
+        <div class="modal-content">
+          <div class="modal-header"><h3>Edit Patient Details</h3></div>
+          <form class="form" autocomplete="off">
+            <input type="text" name="firstName" placeholder="First Name">
+            <input type="text" name="lastName" placeholder="Last Name">
+            <input type="number" name="phone" placeholder="Phone">
+            <input type="email" name="email" placeholder="Email">
+            <button class="btn btn-modal">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
   
   </section>
   
@@ -369,12 +389,9 @@
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <script src="plugins/moment/moment.min.js"></script>
 
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- <script src="plugins/summernote/summernote-bs4.min.js"></script> -->
-<!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+
 <script src="dist/js/adminlte.js"></script>
-<!-- <script src="dist/js/demo.js"></script> -->
-<!-- <script src="dist/js/pages/dashboard.js"></script> -->
+
 
 
 

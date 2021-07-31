@@ -6408,6 +6408,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   border-radius: 0.3rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
   outline: 0;
+
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
 }
 
 .modal-backdrop {
@@ -52415,4 +52419,3 @@ a.text-muted:hover {
 .dark-mode .dark-mode.accent-gray-dark .page-item .page-link:hover, .dark-mode .dark-mode.accent-gray-dark .page-item .page-link:focus {
   color: #3f474e;
 }
-/*# sourceMappingURL=adminlte.css.map */
