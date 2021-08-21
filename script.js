@@ -18,6 +18,15 @@ const tableUsers = document.querySelector('.table-users');
 
 let id;
 
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 // Create element and render users
 const renderUser = doc => {
   const tr = `
